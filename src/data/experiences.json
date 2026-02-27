@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "senior-frontend-engineer-techcorp",
+    "role": "Senior Frontend Engineer",
+    "company": "TechCorp Inc.",
+    "description": "Led the architectural redesign of the core web application using React and Next.js, resulting in a 40% improvement in load times. Mentored junior developers and established CI/CD best practices.",
+    "date": "Jan 2024 - Present",
+    "skills": [
+        { "name": "React", "icon": "logos:react" },
+        { "name": "Next.js", "icon": "logos:nextjs-icon" },
+        { "name": "TypeScript", "icon": "logos:typescript-icon" },
+        { "name": "Tailwind", "icon": "logos:tailwindcss-icon" }
+    ]
+  },
+  {
+    "slug": "frontend-developer-webstudio",
+    "role": "Frontend Developer",
+    "company": "WebStudio Agency",
+    "description": "Developed and maintained multiple client websites using modern web technologies. Collaborated closely with designers to implement pixel-perfect, responsive user interfaces with complex animations.",
+    "date": "Mar 2022 - Dec 2023",
+    "skills": [
+        { "name": "Astro", "icon": "logos:astro-icon" },
+        { "name": "Vue.js", "icon": "logos:vue" },
+        { "name": "Framer Motion", "icon": "logos:framer" },
+        { "name": "PHP", "icon": "logos:php" },
+        { "name": "SCSS", "icon": "logos:sass" }
+    ]
+  },
+  {
+    "slug": "junior-web-developer-startup",
+    "role": "Junior Web Developer",
+    "company": "Innovate Startup",
+    "description": "Assisted in the development of the company's main SaaS product. Implemented accessible UI components and integrated RESTful APIs to display real-time data.",
+    "date": "Jun 2020 - Feb 2022",
+    "skills": [
+        { "name": "Angular", "icon": "logos:angular-icon" },
+        { "name": "JavaScript", "icon": "logos:javascript" },
+        { "name": "HTML5", "icon": "logos:html-5" },
+        { "name": "CSS3", "icon": "logos:css-3" }
+    ]
+  }
+]

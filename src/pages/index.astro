@@ -1,11 +1,99 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { Button } from '../components/common/Button';
+import { FadeIn } from '../components/animations/FadeIn';
+import { StaggerContainer } from '../components/animations/StaggerContainer';
+import { StaggerItem } from '../components/animations/StaggerItem';
+import { Timeline } from '../components/sections/Timeline';
+import { ScrollIndicator } from '../components/common/ScrollIndicator';
+import experienceData from '../data/experiences.json';
 ---
 
 <Layout>
-	<Welcome />
+
+    {/* Hero Section */}
+	<section id="home" class="relative flex flex-col items-center justify-center min-h-screen px-4 py-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Column: About Me */}
+            <StaggerContainer client:load className="space-y-8 flex flex-col justify-center text-left">
+                <StaggerItem client:load className="space-y-6">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter sm:leading-none text-balance">
+                        Hi, I'm <span class="text-primary/80">Rathdaro</span>
+                    </h1>
+                    <div class="prose prose-lg text-muted-foreground font-medium leading-relaxed tracking-tight text-balance">
+                        <p>
+                            A developer passionate about building fast, accessible, and beautiful web experiences. 
+                            I specialize in modern web technologies including React, Astro, and Tailwind CSS.
+                        </p>
+                        <p class="mt-4">
+                            When I'm not coding, I'm likely exploring new design trends or optimizing performance.
+                        </p>
+                    </div>
+                </StaggerItem>
+                <StaggerItem client:load className="flex flex-col sm:flex-row gap-4 mt-8">
+                    <a href="#experience">
+                        <Button client:load size="lg" className="rounded-full px-8 text-base shadow-sm">View Experience</Button>
+                    </a>
+                    <a href="#contact">
+                        <Button client:load variant="outline" size="lg" className="rounded-full px-8 text-base bg-background/50 backdrop-blur-sm">Contact Me</Button>
+                    </a>
+                </StaggerItem>
+            </StaggerContainer>
+
+            {/* Right Column: 3D Model Placeholder */}
+            <FadeIn client:load direction="right" className="relative w-full aspect-square md:aspect-auto md:h-[600px] bg-secondary/20 rounded-3xl border border-dashed border-border/50 flex flex-col items-center justify-center">
+                <div class="text-muted-foreground/50 font-medium flex flex-col items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+                    <span>3D Model (.glb) Placeholder space</span>
+                </div>
+            </FadeIn>
+        </div>
+        <ScrollIndicator client:load />
+	</section>
+
+    {/* Experience Section */}
+    <section id="experience" class="py-32 px-4 max-w-7xl mx-auto">
+        <FadeIn client:load direction="up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center tracking-tight">Experience</h2>
+        </FadeIn>
+        
+        <Timeline 
+            client:load 
+            experiences={experienceData} 
+        />
+    </section>
+
+
+
+    {/* Contact Section */}
+    <section id="contact" class="py-32 px-4 max-w-2xl mx-auto">
+        <FadeIn client:load direction="up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center tracking-tight">Get in Touch</h2>
+            <p class="text-center text-lg text-muted-foreground mb-12 text-balance tracking-tight">
+                Have a project in mind? Let's build something amazing together.
+            </p>
+        </FadeIn>
+        
+        <FadeIn client:load direction="up" delay={0.2}>
+            <form class="space-y-6 bg-card/40 backdrop-blur-2xl p-8 md:p-10 rounded-3xl border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] relative z-10">
+                <div class="grid gap-3">
+                    <label for="name" class="text-sm font-semibold tracking-tight">Name</label>
+                    <input type="text" id="name" class="flex h-12 w-full rounded-xl border border-input bg-background/50 px-4 py-2 text-base transition-colors placeholder:text-muted-foreground/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:bg-background" placeholder="Your name" />
+                </div>
+                <div class="grid gap-3">
+                    <label for="email" class="text-sm font-semibold tracking-tight">Email</label>
+                    <input type="email" id="email" class="flex h-12 w-full rounded-xl border border-input bg-background/50 px-4 py-2 text-base transition-colors placeholder:text-muted-foreground/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:bg-background" placeholder="m@example.com" />
+                </div>
+                <div class="grid gap-3">
+                    <label for="message" class="text-sm font-semibold tracking-tight">Message</label>
+                    <textarea id="message" rows="5" class="flex w-full rounded-xl border border-input bg-background/50 px-4 py-3 text-base transition-colors placeholder:text-muted-foreground/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:bg-background resize-y" placeholder="Your message..."></textarea>
+                </div>
+                
+                <Button className="w-full h-12 rounded-xl text-base font-medium mt-4 transition-transform active:scale-[0.98]" client:load>
+                    Send Message
+                </Button>
+            </form>
+        </FadeIn>
+    </section>
 </Layout>
+
