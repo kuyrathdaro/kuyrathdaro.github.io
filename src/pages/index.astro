@@ -7,52 +7,61 @@ import { StaggerItem } from '../components/animations/StaggerItem';
 import { Timeline } from '../components/sections/Timeline';
 import { ScrollIndicator } from '../components/common/ScrollIndicator';
 import experienceData from '../data/experiences.json';
+import contactData from '../data/contact.json';
 ---
 
 <Layout>
-
     {/* Hero Section */}
-	<section id="home" class="relative flex flex-col items-center justify-center min-h-screen px-4 py-20 overflow-hidden">
-        <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Column: About Me */}
-            <StaggerContainer client:load className="space-y-8 flex flex-col justify-center text-left">
+	<section id="me" class="relative flex flex-col items-center justify-center min-h-[90vh] px-4 py-20 overflow-hidden scroll-mt-32">
+        <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center">
+            {/* Left Column: About Me Content */}
+            <StaggerContainer client:load className="space-y-8 flex flex-col justify-center text-left order-1">
                 <StaggerItem client:load className="space-y-6">
-                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter sm:leading-none text-balance">
-                        Hi, I'm <span class="text-primary/80">Rathdaro</span>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-wider uppercase">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                        </span>
+                        Available for new projects
+                    </div>
+                    
+                    <h1 class="text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.9] text-balance">
+                        Designing <br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-600 to-primary animate-gradient">Digital </span>
+                        Experiences
                     </h1>
-                    <div class="prose prose-lg text-muted-foreground font-medium leading-relaxed tracking-tight text-balance">
+                    
+                    <div class="prose prose-xl text-muted-foreground/80 font-medium leading-relaxed tracking-tight text-balance max-w-xl">
                         <p>
-                            A developer passionate about building fast, accessible, and beautiful web experiences. 
-                            I specialize in modern web technologies including React, Astro, and Tailwind CSS.
-                        </p>
-                        <p class="mt-4">
-                            When I'm not coding, I'm likely exploring new design trends or optimizing performance.
+                            I'm <span class="text-foreground font-bold italic">Rathdaro</span>, a Fullstack Developer specializing in building high-performance, accessible, and beautifully secured applications.
                         </p>
                     </div>
-                </StaggerItem>
-                <StaggerItem client:load className="flex flex-col sm:flex-row gap-4 mt-8">
-                    <a href="#experience">
-                        <Button client:load size="lg" className="rounded-full px-8 text-base shadow-sm">View Experience</Button>
-                    </a>
-                    <a href="#contact">
-                        <Button client:load variant="outline" size="lg" className="rounded-full px-8 text-base bg-background/50 backdrop-blur-sm">Contact Me</Button>
-                    </a>
                 </StaggerItem>
             </StaggerContainer>
 
             {/* Right Column: 3D Model Placeholder */}
-            <FadeIn client:load direction="right" className="relative w-full aspect-square md:aspect-auto md:h-[600px] bg-secondary/20 rounded-3xl border border-dashed border-border/50 flex flex-col items-center justify-center">
-                <div class="text-muted-foreground/50 font-medium flex flex-col items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
-                    <span>3D Model (.glb) Placeholder space</span>
+            <FadeIn client:load direction="right" className="relative w-full aspect-square md:aspect-auto md:h-[450px] bg-gradient-to-br from-secondary/20 to-secondary/5 rounded-[3rem] border border-border/50 backdrop-blur-3xl flex flex-col items-center justify-center overflow-hidden group shadow-2xl shadow-primary/5 order-2">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+                <div class="text-muted-foreground/40 font-medium flex flex-col items-center gap-4 relative z-10">
+                    <div class="p-6 rounded-full bg-background/50 border border-white/10 shadow-inner">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shapes opacity-40 animate-pulse"><path d="M8.3 10a.7.7 0 0 1-.614-.937L11.3 1a.7.7 0 0 1 1.4 0l3.614 8.063a.7.7 0 0 1-.614.937H8.3Z"/><rect width="7" height="7" x="14" y="14" rx="1"/><circle cx="5" cy="17.5" r="3.5"/></svg>
+                    </div>
+                    <div class="text-center">
+                        <span class="block text-foreground/80 font-bold tracking-tight text-lg">3D Environment</span>
+                        <span class="text-xs uppercase tracking-widest opacity-50">Interactive GLB Space</span>
+                    </div>
                 </div>
+                
+                {/* Decorative elements */}
+                <div class="absolute top-8 right-8 w-24 h-24 rounded-full bg-primary/5 blur-3xl"></div>
+                <div class="absolute bottom-12 left-12 w-32 h-32 rounded-full bg-blue-500/5 blur-3xl"></div>
             </FadeIn>
         </div>
         <ScrollIndicator client:load />
 	</section>
 
     {/* Experience Section */}
-    <section id="experience" class="py-32 px-4 max-w-7xl mx-auto">
+    <section id="experience" class="py-32 px-4 max-w-7xl mx-auto scroll-mt-32">
         <FadeIn client:load direction="up">
             <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center tracking-tight">Experience</h2>
         </FadeIn>
@@ -63,37 +72,35 @@ import experienceData from '../data/experiences.json';
         />
     </section>
 
-
-
     {/* Contact Section */}
-    <section id="contact" class="py-32 px-4 max-w-2xl mx-auto">
+    <section id="contact" class="py-32 px-4 max-w-5xl mx-auto scroll-mt-32">
         <FadeIn client:load direction="up">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center tracking-tight">Get in Touch</h2>
-            <p class="text-center text-lg text-muted-foreground mb-12 text-balance tracking-tight">
-                Have a project in mind? Let's build something amazing together.
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center tracking-tight">Let's Connect</h2>
+            <p class="text-center text-lg text-muted-foreground/80 mb-12 text-balance tracking-tight max-w-xl mx-auto">
+                I'm always open to new opportunities and collaborations. 
+                Feel free to reach out on any of these platforms.
             </p>
         </FadeIn>
         
-        <FadeIn client:load direction="up" delay={0.2}>
-            <form class="space-y-6 bg-card/40 backdrop-blur-2xl p-8 md:p-10 rounded-3xl border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] relative z-10">
-                <div class="grid gap-3">
-                    <label for="name" class="text-sm font-semibold tracking-tight">Name</label>
-                    <input type="text" id="name" class="flex h-12 w-full rounded-xl border border-input bg-background/50 px-4 py-2 text-base transition-colors placeholder:text-muted-foreground/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:bg-background" placeholder="Your name" />
-                </div>
-                <div class="grid gap-3">
-                    <label for="email" class="text-sm font-semibold tracking-tight">Email</label>
-                    <input type="email" id="email" class="flex h-12 w-full rounded-xl border border-input bg-background/50 px-4 py-2 text-base transition-colors placeholder:text-muted-foreground/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:bg-background" placeholder="m@example.com" />
-                </div>
-                <div class="grid gap-3">
-                    <label for="message" class="text-sm font-semibold tracking-tight">Message</label>
-                    <textarea id="message" rows="5" class="flex w-full rounded-xl border border-input bg-background/50 px-4 py-3 text-base transition-colors placeholder:text-muted-foreground/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:bg-background resize-y" placeholder="Your message..."></textarea>
-                </div>
-                
-                <Button className="w-full h-12 rounded-xl text-base font-medium mt-4 transition-transform active:scale-[0.98]" client:load>
-                    Send Message
-                </Button>
-            </form>
-        </FadeIn>
+        <div class="flex flex-wrap items-center justify-center gap-16 max-w-4xl mx-auto">
+            {contactData.map((social, index) => (
+                <FadeIn client:load direction="up" delay={index * 0.1}>
+                    <a 
+                        href={social.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="group relative flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
+                        aria-label={social.name}
+                    >
+                        <img 
+                            src={`https://api.iconify.design/${social.icon}.svg`}
+                            alt={social.name}
+                            class="w-10 h-10 opacity-40 group-hover:opacity-100 transition-all duration-300 drop-shadow-[0_0_10px_rgba(var(--primary),0)] group-hover:drop-shadow-[0_0_15px_rgba(var(--primary),0.3)]"
+                        />
+                    </a>
+                </FadeIn>
+            ))}
+        </div>
     </section>
 </Layout>
 

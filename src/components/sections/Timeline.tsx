@@ -91,11 +91,11 @@ export function Timeline({ experiences }: TimelineProps) {
                                         {experience.skills && experience.skills.length > 0 && (
                                             <div className="flex flex-wrap gap-1.5 mt-auto">
                                                 {experience.skills.map((skill) => (
-                                                    <span key={skill.name} className="px-2.5 py-0.5 text-[11px] font-semibold bg-secondary/50 text-secondary-foreground rounded-full border border-border/50 transition-colors hover:bg-secondary flex items-center gap-1">
+                                                    <span key={skill.name} className="px-4 py-1.5 text-sm font-semibold bg-secondary/50 text-secondary-foreground rounded-full border border-border/50 transition-colors hover:bg-secondary flex items-center gap-2">
                                                         <img 
                                                             src={`https://api.iconify.design/${skill.icon.replace(':', '/')}.svg`} 
                                                             alt={`${skill.name} icon`}
-                                                            className="w-3 h-3 object-contain"
+                                                            className="w-5 h-5 object-contain"
                                                         />
                                                         {skill.name}
                                                     </span>
