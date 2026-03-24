@@ -2,9 +2,9 @@
   {
     "slug": "senior-fullstack-developer-polygram",
     "role": "Senior Fullstack Developer",
-    "company": "Polygram Solutions Co., Ltd",
-    "description": "",
-    "date": "Jan 2024 - Present",
+    "company": "Polygram Solutions Co., Ltd.",
+    "description": "Developing scalable fullstack web applications using Node.js, Angular, and MongoDB.",
+    "date": "2024 - Present",
     "skills": [
       {
         "name": "Node.js, Express.js",
@@ -23,9 +23,9 @@
   {
     "slug": "senior-backend-developer-intechdev",
     "role": "Senior Backend Developer, Tech Lead",
-    "company": "IntechDev Co., Ltd",
-    "description": "",
-    "date": "Mar 2022 - Dec 2023",
+    "company": "IntechDev Co., Ltd.",
+    "description": "Technically leading backend development and architecting robust systems with NestJS and Node.js.",
+    "date": "2021 - 2024",
     "skills": [
       {
         "name": "Node.js, Express.js, NestJS",
@@ -41,8 +41,8 @@
     "slug": "information-security-officer-intern-prince-bank",
     "role": "Information Security Officer Intern",
     "company": "Prince Bank Plc.",
-    "description": "Penetration Testing, Vulnerability Assessment, Security Hardening, Security Monitoring, Security Incident Response, Security Awareness Training",
-    "date": "",
+    "description": "Performed penetration testing, security hardening, and vulnerability assessments for banking infrastructure.",
+    "date": "2021",
     "skills": [
       {
         "name": "Penetration Testing",
@@ -65,13 +65,17 @@
   {
     "slug": "php-developer-allweb",
     "role": "PHP Developer",
-    "company": "Allweb IT Co., Ltd",
-    "description": "Assisted in the development of the secured PHP Web application.",
+    "company": "Allweb IT Co., Ltd.",
+    "description": "Developed and secured PHP web applications with PostgreSQL integration.",
     "date": "2017 - 2021",
     "skills": [
       {
         "name": "PHP",
         "icon": "logos:php"
+      },
+      {
+        "name": "PostgreSQL",
+        "icon": "logos:postgresql"
       },
       {
         "name": "JavaScript",

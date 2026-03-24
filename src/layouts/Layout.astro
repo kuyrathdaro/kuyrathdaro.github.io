@@ -14,12 +14,12 @@ import '../styles/global.css';
 		<title>Rathdaro Kuy</title>
         <ClientRouter />
 	</head>
-	<body class="bg-[#fcfdfd] text-foreground min-h-screen font-sans antialiased transition-colors duration-300 relative overflow-x-hidden">
+	<body class="bg-white text-foreground min-h-screen font-sans antialiased transition-colors duration-300 relative overflow-x-hidden">
         {/* Soft, Soothing Background Liquid Orbs */}
         <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
-            <div class="absolute -top-[20%] -left-[10%] w-[70vw] h-[70vh] rounded-full bg-slate-200/40 mix-blend-multiply filter blur-[120px] opacity-60 animate-blob"></div>
-            <div class="absolute top-[10%] -right-[10%] w-[60vw] h-[60vh] rounded-full bg-blue-50/50 mix-blend-multiply filter blur-[120px] opacity-50 animate-blob animation-delay-2000"></div>
-            <div class="absolute -bottom-[20%] left-[20%] w-[80vw] h-[80vh] rounded-full bg-zinc-200/40 mix-blend-multiply filter blur-[120px] opacity-60 animate-blob animation-delay-4000"></div>
+            <div class="absolute -top-[20%] -left-[10%] w-[70vw] h-[70vh] rounded-full bg-[#F5F5F7]/80 mix-blend-multiply filter blur-[120px] opacity-60"></div>
+            <div class="absolute top-[10%] -right-[10%] w-[60vw] h-[60vh] rounded-full bg-[#F5F5F7]/60 mix-blend-multiply filter blur-[120px] opacity-50"></div>
+            <div class="absolute -bottom-[20%] left-[20%] w-[80vw] h-[80vh] rounded-full bg-[#F5F5F7]/80 mix-blend-multiply filter blur-[120px] opacity-60"></div>
         </div>
 
         <div class="relative z-10">
@@ -33,7 +33,7 @@ import '../styles/global.css';
                     <p class="text-[11px] uppercase tracking-widest text-muted-foreground/50 font-bold flex items-center justify-center gap-2">
                         &copy; {new Date().getFullYear()}
                         <span class="opacity-30">•</span> 
-                        Created with <span class="text-primary tracking-normal">❤️</span> using Astro 
+                        Created with <span class="text-primary tracking-normal">❤️</span> using <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors duration-300">Astro</a>
                     </p>
                 </div>
             </footer>
@@ -48,20 +48,4 @@ import '../styles/global.css';
 		width: 100%;
 		height: 100%;
 	}
-
-    @keyframes blob {
-        0% { transform: translate(0px, 0px) scale(1); }
-        33% { transform: translate(30px, -50px) scale(1.1); }
-        66% { transform: translate(-20px, 20px) scale(0.9); }
-        100% { transform: translate(0px, 0px) scale(1); }
-    }
-    .animate-blob {
-        animation: blob 15s infinite alternate ease-in-out;
-    }
-    .animation-delay-2000 {
-        animation-delay: 2s;
-    }
-    .animation-delay-4000 {
-        animation-delay: 4s;
-    }
 </style>
