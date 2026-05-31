@@ -6,6 +6,12 @@
     "color": "hover:bg-[#24292e]/10 hover:border-[#24292e]/30"
   },
   {
+    "name": "X",
+    "icon": "simple-icons:x",
+    "url": "https://x.com/0xdaro",
+    "color": "hover:bg-[#24292e]/10 hover:border-[#24292e]/30"
+  },
+  {
     "name": "LinkedIn",
     "icon": "simple-icons:linkedin",
     "url": "https://linkedin.com/in/kuyrathdaro",
