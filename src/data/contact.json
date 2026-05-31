@@ -1,0 +1,26 @@
+[
+  {
+    "name": "GitHub",
+    "icon": "simple-icons:github",
+    "url": "https://github.com/kuyrathdaro",
+    "color": "hover:bg-[#24292e]/10 hover:border-[#24292e]/30"
+  },
+  {
+    "name": "X",
+    "icon": "simple-icons:x",
+    "url": "https://x.com/0xdaro",
+    "color": "hover:bg-[#24292e]/10 hover:border-[#24292e]/30"
+  },
+  {
+    "name": "LinkedIn",
+    "icon": "simple-icons:linkedin",
+    "url": "https://linkedin.com/in/kuyrathdaro",
+    "color": "hover:bg-[#0077b5]/10 hover:border-[#0077b5]/30"
+  },
+  {
+    "name": "Email",
+    "icon": "mdi:email-outline",
+    "url": "mailto:rathdaro.kuy@hotmail.com",
+    "color": "hover:bg-primary/10 hover:border-primary/30"
+  }
+]
