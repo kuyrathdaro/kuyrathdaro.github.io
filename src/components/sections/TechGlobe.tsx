@@ -145,11 +145,11 @@ function NeonGlobe({ radius }: { radius: number }) {
 
       {/* Futuristic FUI orbital paths */}
       <mesh rotation={[Math.PI / 3, 0, 0]}>
-        <torusGeometry args={[radius + 1.5, 0.01, 16, 128]} />
+        <torusGeometry args={[radius + 0.8, 0.01, 16, 128]} />
         <meshBasicMaterial color="#c084fc" transparent opacity={0.4} blending={THREE.AdditiveBlending} toneMapped={false} />
       </mesh>
       <mesh rotation={[-Math.PI / 4, Math.PI / 6, 0]}>
-        <torusGeometry args={[radius + 2.5, 0.008, 16, 128]} />
+        <torusGeometry args={[radius + 1.2, 0.008, 16, 128]} />
         <meshBasicMaterial color="#3b82f6" transparent opacity={0.3} blending={THREE.AdditiveBlending} toneMapped={false} />
       </mesh>
       
@@ -161,8 +161,8 @@ function NeonGlobe({ radius }: { radius: number }) {
 
 export default function TechGlobe() {
   return (
-    <div className="w-full h-full min-h-[500px] flex items-center justify-center relative">
-      <Canvas gl={{ alpha: true, antialias: false, preserveDrawingBuffer: true }} camera={{ position: [0, 0, 18], fov: 60 }}>
+    <div className="w-full h-full min-h-[680px] flex items-center justify-center relative">
+      <Canvas gl={{ alpha: true, antialias: true }} dpr={[1, 2]} camera={{ position: [0, 0, 18], fov: 60 }}>
         <ambientLight intensity={1.5} />
         <pointLight position={[10, 10, 10]} intensity={2} />
         

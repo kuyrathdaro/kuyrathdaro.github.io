@@ -13,7 +13,7 @@ import contactData from '../data/contact.json';
 
 <Layout>
     {/* Hero Section */}
-	<section id="me" class="relative flex flex-col items-center justify-center min-h-[90vh] px-4 py-20 overflow-hidden scroll-mt-32">
+	<section id="me" class="relative flex flex-col items-center justify-center min-h-[90vh] px-4 py-8 overflow-hidden scroll-mt-32">
         <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center">
             {/* Left Column: About Me Content */}
             <StaggerContainer client:load className="space-y-10 flex flex-col justify-center text-left order-1">
@@ -31,7 +31,7 @@ import contactData from '../data/contact.json';
             </StaggerContainer>
 
             {/* Right Column: 3D Model */}
-            <FadeIn client:load direction="right" className="relative w-full aspect-square md:aspect-auto md:h-[450px] flex flex-col items-center justify-center order-2">
+            <FadeIn client:load direction="right" className="relative w-full aspect-square md:aspect-auto md:h-[680px] flex flex-col items-center justify-center order-2">
                 <div class="relative z-10 w-full h-full flex items-center justify-center">
                     <TechGlobe client:load />
                 </div>
